@@ -1,9 +1,16 @@
 <div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
+  <h2>Coming soon-Your Weather Forecast</h2>
   <p class="lead">
     <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
+    For now, check out this adding machine!
   </p>
+  <div ng-app ng-init="firstnum=1; secondnum=2">
+    <input type="number" min="0" ng-model="firstnum">
+      plus
+    <input type="number" min="0" ng-model="secondnum">
+      equals
+    <span class="label label-success">{{firstnum + secondnum}}</span>
+  </div>
   <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
 </div>
 
