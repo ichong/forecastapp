@@ -24,6 +24,10 @@ angular.module('forecastappApp')
 
     	if (!$localStorage.savedCities){
     		$localStorage.savedCities = [cityData];
+
+            $scope.citySaved = {
+                'success': true
+            };     
     	} else {
     		//We have already saved some cities.
     		//Check to make sure we haven't already saved the current city.
@@ -37,8 +41,16 @@ angular.module('forecastappApp')
     		}
     		if (save==true){
     			$localStorage.savedCities.push(cityData);
+                //Add object to trigger messages
+                $scope.citySaved = {
+                    'success': true
+                };
     		} else {
     			console.log('city already saved');
+                //add object to trigger messages
+                $scope.citySaved = {
+                    'duplicate': true
+                };
     		}
     		
     	}

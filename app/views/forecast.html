@@ -1,11 +1,23 @@
-<h1>5-Day Forecast for {{forecastData.city.name}} {{forecastData.city.country}}</h1>
+<h1>5-Day Forecast for {{forecastData.city.name}}, {{forecastData.city.country}}</h1>
+
 <dl ng-repeat="prediction in forecastData.list" class="weather-forecast">
-	<dt>Forecast for {{weather.dt*1000 | date:'MMM dd, yyyy'}}</dt>
+	<dt>Forecast for {{prediction.dt*1000 | date:'MMM dd, yyyy'}}</dt>
 	<dd>{{prediction.weather[0].main}}</dd>
 	<dd>{{prediction.weather[0].description}}</dd>
 	<dt>Temperature</dt>
 	<dd>Min: {{prediction.temp.min}} &deg;F Max: {{prediction.temp.max}} &deg;F</dd>
 </dl>
+
+<p ng-if="!citySaved"><button class="btn btn-sm btn-primary" ng-click="saveCity(forecastData.city)">Save City</button></p>
+
+<div ng-messages="citySaved">
+	<p class="city-saved-alert bg-success text-success" ng-message="success">
+	{{forecastData.city.name}} has been saved to your list of cities.
+	</p>
+	<p class="city-saved-alert bg-warning text-warning" ng-message="duplicate">
+	{{forecastData.city.name}} has already been saved to your list of cities.
+	</p>
+</div>
 
 <p><a ng-href="#/current/{{cityID}}" class="btn btn-lg btn-primary">View Current Weather</a></p>
 

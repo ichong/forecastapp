@@ -1,17 +1,21 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+@import "transitions";
+
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
 .browsehappy {
   margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
+  background: #daad86;
+  color: #173e43;
   padding: 0.2em 0;
 }
 
 body {
   padding: 0;
+  background: #fae596;
+  font: PT serif;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -25,22 +29,22 @@ body {
 /* Custom page header */
 .header {
   border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 
   /* Make the masthead heading the same height as the navigation */
   h3 {
     margin-top: 0;
     margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
+    line-height: 30px;
+    padding-bottom: 10px;
   }
 }
 
 /* Custom page footer */
 .footer {
   padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+  color: #333;
+  border-top: 1px solid #3fb0ac;
 }
 
 .container-narrow > hr {
@@ -50,7 +54,7 @@ body {
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #fae596;
 
   .btn {
     font-size: 21px;
@@ -92,5 +96,17 @@ body {
   li {
     list-style: none;
     padding: 10px;
+  }
+
+  .btn {
+    background: #3fb0ac;
+  }
+
+  .btn-primary {
+    background: #3fb0ac;
+
+ul .navbar {
+    background: #173e43;
+  }
   }
 }
