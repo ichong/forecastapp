@@ -1,7 +1,7 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 $neutral-color: #e8edf3;
 $accent-color: #22264b;
-$forecast-color: #6534ff;
+$forecast-color: #9068be;
 
 @import "transitions";
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
@@ -78,8 +78,8 @@ h1.smaller, h2 {
   border-bottom: 1px solid $accent-color;
 
   .btn {
-    font-size: 18px;
-    padding: 14px 24px;
+    font-size: 16px;
+    padding: 12px 20px;
   }
 }
 
@@ -135,13 +135,17 @@ h1.smaller, h2 {
   }
 
   dl, dt {
-    font-size: 1em;  
-    font-weight: 400;
+    font-size: 16px;  
+    font-weight: 500;
     font-style: bold;
   }
 
   dt {
     color: $forecast-color;
+  }
+
+  dd.temp-number {
+    font-size: 2em;
   }
 } 
 // End Media
