@@ -12,8 +12,18 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+h1 {
+  font-weight: 900;
+}
+
 ul {
   padding: 0;
+}
+
+// Bootstrap 5 column hack
+// http://stackoverflow.com/questions/10387740/five-equal-columns-in-twitter-bootstrap
+.col-xs-15{
+  width:20%;
 }
 
 .browsehappy {
@@ -146,6 +156,12 @@ h1.smaller, h2 {
 
   dd.temp-number {
     font-size: 2em;
+  }
+
+  dd i {
+    font-size: 72px;
+    font-weight: 900;
+    padding: 20px;
   }
 } 
 // End Media
