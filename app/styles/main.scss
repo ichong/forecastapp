@@ -102,6 +102,21 @@ h1.smaller, h2 {
   }
 }
 
+.current-icon {
+  display: block;
+  font-size: 150px;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.card {
+  background: #fff;
+  background: $accent-color;
+  text-align: center;
+  padding: 70px 0 40px;
+  border-radius: 8px;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
@@ -129,15 +144,11 @@ h1.smaller, h2 {
     padding: 10px;
   }
 
-  .btn {
-    background: $accent-color;
-    border: none;
-  }
-
   .btn-primary {
     background: $accent-color;
-    border: none;
+    border: 500px;
     border-radius: 100px;
+    margin: 5px 10px;
   }
 
   ul .navbar {
@@ -156,6 +167,10 @@ h1.smaller, h2 {
 
   dd.temp-number {
     font-size: 2em;
+  }
+
+  dd {
+    margin-bottom: .75em;
   }
 
   dd i {

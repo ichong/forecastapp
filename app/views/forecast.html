@@ -10,9 +10,9 @@
 	  	<dl class="weather-forecast">
 			<dt>{{ prediction.dt*1000 | date:'MMM dd, yyyy' }}</dt>
 			<dd><i class="wi {{ getIcon(prediction.weather[0].main) }}"></i></dd>
-			<dd>{{ prediction.weather[0].description }}</dd>
+			<dd style="text-transform: capitalize; font-weight: bold;">{{ prediction.weather[0].description }}</dd>
 			<dt>Temperature</dt>
-			<dd>Min: {{ prediction.temp.min }} &deg;F Max: {{ prediction.temp.max }} &deg;F</dd>
+			<dd>Max: {{ prediction.temp.max }} &deg;F Min: {{ prediction.temp.min }} &deg;F</dd>
 		</dl>
 	  </div>
 	 </div>

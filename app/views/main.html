@@ -1,5 +1,5 @@
 <div ng-app class="jumbotron" ng-controller="MainCtrl">
-  <h1 class="smaller">City Forecast</h1>
+  <h1 class="smaller">What's the Weather?</h1>
   <p class="lead">
     <div ng-init="location='Seattle'">
       <p>
@@ -16,7 +16,6 @@
         <dl ng-repeat="city in citiesFound.list">
           <dt>{{city.name}}, {{city.sys.country}}</dt>
           <dd>{{weatherType}} {{city.weather[0].main}} - {{city.weather[0].description}}</dd>
-          <dt>Temperature</dt>
           <dd><i class="wi {{ getIcon(prediction.weather[0].main) }}"></i></dd>
           <dd class="temp-number">{{city.main.temp}} &deg;F</dd>
           <dd><a ng-href="#/current/{{city.id}}" class="btn btn-lg btn-primary">View Weather</a></dd>
